@@ -69,3 +69,9 @@ class Solution(object):
             charMap[ord(s[j])] = j
             max_len = max(max_len, j - i + 1)
         return max_len
+
+if __name__ == '__main__':
+    ob = Solution()
+    ins = "aabccde"
+    len = ob.lengthOfLongestSubstring(ins)
+    print("len=%s" % len)
