@@ -55,3 +55,33 @@ class Solution(object):
         if carry > 0:
             curr.next = ListNode(carry)
         return head.next
+
+    def insert(self, root, item):
+        temp = ListNode(0)
+        temp.val = item
+        temp.next = root
+        root = temp
+        return root
+
+    def display(self, root):
+        while root is not None:
+            print(root.val)
+            root = root.next
+
+    def array2List(self, arr, n):
+        root = None
+        for i in range(n-1, -1, -1):
+            root = self.insert(root, arr[i])
+        return root
+
+if __name__ == '__main__':
+    arr = [1, 2, 3, 4, 5]
+    arr2 = [2, 3, 9]
+    n = len(arr)
+    n2 = len(arr2)
+
+    s = Solution()
+    l1 = s.array2List(arr, n)
+    l2 = s.array2List(arr2, n2)
+    r = s.addTwoNumbers(l1, l2)
+    s.display(r)
