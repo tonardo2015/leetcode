@@ -1,11 +1,12 @@
-## Python/JAVA/C++ Solutions for Leetcode (inspired by [haoel's leetcode](https://github.com/haoel/leetcode))
+## Python/JAVA/C++ Solutions for Leetcode  
 
-Remember solutions are only solutions to given problems.  
+Remember solutions are only solutions to given problems (Inspired by [haoel's leetcode](https://github.com/haoel/leetcode)).     
 If you want full study checklist for code & whiteboard interview, please turn to [jwasham's coding-interview-university](https://github.com/jwasham/coding-interview-university).
 
 Also, there are open source implementations for basic data structs and algorithms, such as [Algorithms in Python](https://github.com/TheAlgorithms/Python) and [Algorithms in Java](https://github.com/TheAlgorithms/Java). 
 
-[Python](https://github.com/tonardo2015/leetcode/tree/master/python) and [Java](https://github.com/tonardo2015/leetcode/tree/master/java) full list. &hearts; means you need a subscription.
+[Python](https://github.com/tonardo2015/leetcode/tree/master/python) and [Java](https://github.com/tonardo2015/leetcode/tree/master/java) full list.  
+&hearts; means you need a subscription.
 
 | # | Title | Solution | Basic idea (One line) |
 |---| ----- | -------- | --------------------- |
