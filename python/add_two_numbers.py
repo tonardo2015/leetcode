@@ -1,3 +1,4 @@
+# leetcode 2
 # Definition for singly-linked list.
 class ListNode(object):
     def __init__(self, x):
@@ -6,42 +7,11 @@ class ListNode(object):
 
 
 class Solution(object):
-    # def addTwoNumbers(self, l1, l2):
-    #     """
-    #     :type l1: ListNode
-    #     :type l2: ListNode
-    #     :rtype: ListNode
-    #     """
-    #     last = 0
-    #     head = prev = None
-    #     while True:
-    #         if l2 is None and l1 is None and last == 0:
-    #             break
-    #         val = last
-    #         if l2 is not None:
-    #             val += l2.val
-    #             l2 = l2.next
-    #         if l1 is not None:
-    #             val += l1.val
-    #             l1 = l1.next
-    #         if val >= 10:
-    #             val = val % 10
-    #             last = 1
-    #         else:
-    #             last = 0
-    #         current = ListNode(val)
-    #         if prev is None:
-    #             head = current
-    #         else:
-    #             prev.next = current
-    #         prev = current
-    #     return head
-
     def addTwoNumbers(self, l1, l2):
+        dummy = curr = ListNode(0)
         carry = 0
-        # dummy head
-        head = curr = ListNode(0)
-        while l1 or l2:
+
+        while l1 or l2 or carry:
             val = carry
             if l1:
                 val += l1.val
@@ -49,12 +19,15 @@ class Solution(object):
             if l2:
                 val += l2.val
                 l2 = l2.next
+
             curr.next = ListNode(val % 10)
             curr = curr.next
-            carry = val / 10
-        if carry > 0:
-            curr.next = ListNode(carry)
-        return head.next
+
+            carry = val // 10
+
+        #if carry > 0:
+        #    curr.next = ListNode(carry)
+        return dummy.next
 
     def insert(self, root, item):
         temp = ListNode(0)
@@ -64,9 +37,12 @@ class Solution(object):
         return root
 
     def display(self, root):
+        new_arr = []
         while root is not None:
-            print(root.val)
+            #print(root.val)
+            new_arr.append(root.val)
             root = root.next
+        print(new_arr)
 
     def array2List(self, arr, n):
         root = None

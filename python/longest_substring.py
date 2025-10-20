@@ -1,9 +1,5 @@
+# leetcode 3
 class Solution(object):
-'''
-leetcode 3
-:type s: str
-:rtype maxLength: int
-'''
     def lengthOfLongestSubstring(self, s):
         slideWindow = set()
         left, maxLength = 0, 0

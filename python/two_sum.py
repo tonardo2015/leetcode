@@ -1,10 +1,5 @@
+# leetcode 2
 class Solution(object):
-'''
-leetcode 1
-:type nums: list[int]
-:type target: int
-:rtype res: [int] 
-'''
     def twoSum(self, nums, target):
         # two point
         nums_index = [(v, index) for index, v in enumerate(nums)]
@@ -18,6 +13,7 @@ leetcode 1
                 begin += 1
             else:
                 end -= 1
+        return None 
 
 
 if __name__ == '__main__':
